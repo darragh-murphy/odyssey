@@ -21,7 +21,7 @@ exit /b
 rem Main function
 :main
 rem Directories to search for Apache Maven installation
-set "maven_directories=/opt/maven /usr/share/maven /usr/local/maven /opt/apache-maven %USERPROFILE%\apache-maven"
+set "maven_directories=%ProgramFiles%\Apache Maven %ProgramFiles(x86)%\Apache Maven %USERPROFILE%\.m2\wrapper\dists %USERPROFILE%\.m2\repository %ProgramData%\chocolatey\lib\maven %LOCALAPPDATA%\Programs\Maven %LOCALAPPDATA%\maven"
 
 rem Check if Maven is installed in any of the directories
 for %%d in (%maven_directories%) do (
